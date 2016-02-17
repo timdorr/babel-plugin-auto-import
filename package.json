@@ -1,0 +1,29 @@
+{
+  "name": "babel-plugin-auto-import",
+  "version": "0.0.0",
+  "description": "Automatically adds import statements to your code",
+  "author": "Tim Dorr <timdorr@timdorr.com>",
+  "license": "MIT",
+  "repository": "timdorr/babel-plugin-auto-import",
+  "homepage": "https://github.com/timdorr/babel-plugin-auto-import",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "clean": "rimraf lib",
+    "lint": "eslint src test",
+    "test": "mocha --compilers js:babel-register",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.2",
+    "babel-eslint": "^5.0.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-register": "^6.5.2",
+    "eslint": "^2.1.0",
+    "expect": "^1.14.0",
+    "mocha": "^2.4.5",
+    "rimraf": "^2.5.2"
+  }
+}
